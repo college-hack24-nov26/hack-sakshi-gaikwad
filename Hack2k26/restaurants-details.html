@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Restaurant Details | FoodieHub</title>
+<link rel="stylesheet" href="member1.css">
+
+<style>
+.details-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.details-cover {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+.details-content {
+    background: white;
+    padding: 30px;
+    margin-top: 20px;
+    border-radius: 16px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+}
+
+.details-content h1 {
+    color: #e87522;
+    margin-bottom: 10px;
+}
+
+.details-content h2 {
+    margin: 25px 0 10px;
+}
+
+.details-content p {
+    line-height: 1.8;
+    color: #555;
+}
+
+.details-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.details-tags span {
+    background: #fff0e4;
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 25px;
+    color: #e87522;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+@media(max-width:600px) {
+    .details-cover {
+        height: 230px;
+    }
+
+    .details-content {
+        padding: 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header class="topbar">
+<a class="brand" href="index.html">
+<span class="brand-mark">F</span> Foodie<span>Hub</span>
+</a>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="restaurants.html">Restaurants</a>
+<a href="menu.html">Menu</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="cart.html">Cart</a>
+<a href="login.html">Login</a>
+</nav>
+</header>
+
+<section class="page-hero">
+<span class="eyebrow">DISCOVER OUR RESTAURANTS</span>
+<h1>Restaurant <em>Details.</em></h1>
+<p>Know more about your favourite dining place.</p>
+</section>
+
+<main class="details-container">
+
+<img id="restaurantImage" class="details-cover" src="" alt="Restaurant">
+
+<div class="details-content">
+
+<h1 id="restaurantName"></h1>
+<p id="restaurantCategory"></p>
+
+<div class="details-tags">
+<span id="restaurantRating"></span>
+<span id="restaurantHours"></span>
+<span id="restaurantPrice"></span>
+</div>
+
+<h2>About This Restaurant</h2>
+<p id="restaurantAbout"></p>
+
+<h2>Ambience & Experience</h2>
+<p id="restaurantAmbience"></p>
+
+<h2>Location</h2>
+<p id="restaurantLocation"></p>
+
+<h2>Customer Reviews</h2>
+<p id="restaurantReview"></p>
+
+<a class="back-link" href="restaurants.html">← Back to Restaurants</a>
+
+</div>
+</main>
+
+<footer class="footer">
+<a class="brand" href="index.html">
+<span class="brand-mark">F</span> Foodie<span>Hub</span>
+</a>
+<p>Made with love for people who love food.</p>
+<small>© 2026 FoodieHub. All rights reserved.</small>
+</footer>
+
+<script>
+const restaurants = {
+
+"pizza-palace": {
+name: "Pizza Palace",
+category: "Italian Restaurant",
+image: "https://images.unsplash.com/photo-1579751626657-72bc17010498?w=1200",
+rating: "⭐ 4.8 / 5",
+hours: "🕒 11 AM – 11 PM",
+price: "💰 ₹₹",
+about: "Pizza Palace is a welcoming Italian restaurant with a comfortable dining experience and friendly service.",
+ambience: "Enjoy modern interiors, comfortable seating and a relaxed atmosphere with friends and family.",
+location: "Main Market Road, Phaltan",
+review: "A welcoming place for people who enjoy Italian-style dining."
+},
+
+"burger-barn": {
+name: "Burger Barn",
+category: "Fast Food Restaurant",
+image: "https://images.unsplash.com/photo-1550547660-d9450f859349?w=1200",
+rating: "⭐ 4.7 / 5",
+hours: "🕒 10 AM – 10 PM",
+price: "💰 ₹",
+about: "Burger Barn is a casual restaurant with a modern fast-food dining concept.",
+ambience: "A relaxed and lively space suitable for friends and casual outings.",
+location: "Station Road, Phaltan",
+review: "A casual dining spot with a friendly atmosphere."
+},
+
+"spice-garden": {
+name: "Spice Garden",
+category: "Indian Family Restaurant",
+image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=1200",
+rating: "⭐ 4.9 / 5",
+hours: "🕒 11 AM – 11 PM",
+price: "💰 ₹₹",
+about: "Spice Garden offers a comfortable family dining experience inspired by Indian hospitality.",
+ambience: "Warm interiors, family seating and a welcoming environment.",
+location: "Market Area, Phaltan",
+review: "A pleasant place for family dining and get-togethers."
+},
+
+"biryani-house": {
+name: "Biryani House",
+category: "Indian Restaurant",
+image: "https://images.unsplash.com/photo-1563379091339-03246963d96c?w=1200",
+rating: "⭐ 4.8 / 5",
+hours: "🕒 12 PM – 11 PM",
+price: "💰 ₹₹",
+about: "Biryani House is designed for guests who enjoy traditional Indian dining and hospitality.",
+ambience: "A traditional-inspired dining space with comfortable seating.",
+location: "Pune Road, Phaltan",
+review: "A comfortable place for a relaxed dining experience."
+},
+
+"chinese-corner": {
+name: "Chinese Corner",
+category: "Chinese Restaurant",
+image: "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=1200",
+rating: "⭐ 4.6 / 5",
+hours: "🕒 11 AM – 10 PM",
+price: "💰 ₹₹",
+about: "Chinese Corner is a modern restaurant inspired by Chinese dining culture.",
+ambience: "A lively atmosphere with modern interiors and comfortable seating.",
+location: "College Road, Phaltan",
+review: "A casual place for friends and group outings."
+},
+
+"cafe-delight": {
+name: "Cafe Delight",
+category: "Cafe & Beverages",
+image: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1200",
+rating: "⭐ 4.7 / 5",
+hours: "🕒 9 AM – 10 PM",
+price: "💰 ₹₹",
+about: "Cafe Delight is a cozy cafe created for relaxing conversations and casual meetings.",
+ambience: "Comfortable seating, warm lighting and a peaceful cafe atmosphere.",
+location: "College Road, Phaltan",
+review: "A cozy place to spend time with friends."
+},
+
+"south-spice": {
+name: "South Spice",
+category: "South Indian Restaurant",
+image: "https://images.unsplash.com/photo-1630383249896-424e482df921?w=1200",
+rating: "⭐ 4.6 / 5",
+hours: "🕒 8 AM – 10 PM",
+price: "💰 ₹",
+about: "South Spice brings a traditional South Indian dining experience to its guests.",
+ambience: "Simple interiors, comfortable seating and a welcoming atmosphere.",
+location: "Shivaji Chowk, Phaltan",
+review: "A pleasant place for a relaxed meal."
+},
+
+"sweet-cravings": {
+name: "Sweet Cravings",
+category: "Desserts & Bakery",
+image: "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=1200",
+rating: "⭐ 4.8 / 5",
+hours: "🕒 10 AM – 10 PM",
+price: "💰 ₹₹",
+about: "Sweet Cravings is a cheerful bakery and dessert cafe with a welcoming atmosphere.",
+ambience: "Bright interiors and comfortable seating for a sweet break.",
+location: "Main Market, Phaltan",
+review: "A cheerful place for dessert lovers."
+}
+
+};
+
+const params = new URLSearchParams(window.location.search);
+const restaurantId = params.get("id");
+const restaurant = restaurants[restaurantId];
+
+if (restaurant) {
+
+    document.getElementById("restaurantImage").src = restaurant.image;
+    document.getElementById("restaurantName").textContent = restaurant.name;
+    document.getElementById("restaurantCategory").textContent = restaurant.category;
+    document.getElementById("restaurantRating").textContent = restaurant.rating;
+    document.getElementById("restaurantHours").textContent = restaurant.hours;
+    document.getElementById("restaurantPrice").textContent = restaurant.price;
+    document.getElementById("restaurantAbout").textContent = restaurant.about;
+    document.getElementById("restaurantAmbience").textContent = restaurant.ambience;
+    document.getElementById("restaurantLocation").textContent = restaurant.location;
+    document.getElementById("restaurantReview").textContent = restaurant.review;
+
+    document.title = restaurant.name + " | FoodieHub";
+
+} else {
+
+    document.querySelector(".details-content").innerHTML =
+    "<h1>Restaurant Not Found</h1><p>Please select a restaurant from our restaurants page.</p><a class='back-link' href='restaurants.html'>← Back to Restaurants</a>";
+
+    document.getElementById("restaurantImage").style.display = "none";
+}
+</script>
+
+</body>
+</html>

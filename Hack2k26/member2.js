@@ -4,7 +4,17 @@ const foodItems = [
   { id: 3, name: "Paneer Biryani", price: 220 },
   { id: 4, name: "Veg Noodles", price: 130 },
   { id: 5, name: "Farmhouse Pizza", price: 249 },
-  { id: 6, name: "Cold Coffee", price: 99 }
+  { id: 6, name: "Cold Coffee", price: 99 },
+  { id: 7, name: "Cheese Burst Pizza", price: 299 },
+  { id: 8, name: "Veg Burger", price: 119 },
+  { id: 9, name: "Masala Dosa", price: 100 },
+  { id: 10, name: "Veg Thali", price: 180 },
+  { id: 11, name: "Veg Manchurian", price: 160 },
+  { id: 12, name: "Veg Fried Rice", price: 150 },
+  { id: 13, name: "Mango Milkshake", price: 120 },
+  { id: 14, name: "Fresh Lime Juice", price: 60 },
+  { id: 15, name: "Paneer Pizza", price: 269 },
+  { id: 16, name: "Double Cheese Burger", price: 199 }
 ];
 
 function getCart() {

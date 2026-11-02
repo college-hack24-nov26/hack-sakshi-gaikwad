@@ -118,3 +118,25 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+// Restaurant Search
+const restaurantSearch = document.getElementById("restaurantSearch");
+
+if (restaurantSearch) {
+    restaurantSearch.addEventListener("input", function () {
+        const searchValue = this.value.toLowerCase();
+        const cards = document.querySelectorAll(".restaurant-card");
+
+        cards.forEach(function (card) {
+            const restaurantName = card.innerText.toLowerCase();
+
+            card.style.display = restaurantName.includes(searchValue)
+                ? "block"
+                : "none";
+        });
+    });
+}
+
+// View Menu
+function viewMenu(category) {
+    window.location.href = "menu.html?category=" + category;
+}
