@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoodieHub | Signup</title>
+  <link rel="stylesheet" href="member3.css">
+</head>
+<body>
+
+<header class="m3-header">
+  <a href="index.html" class="m3-logo">FoodieHub</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="restaurants.html">Restaurants</a>
+    <a href="menu.html">Menu</a>
+    <a href="cart.html">Cart</a>
+    <a href="login.html">Login</a>
+  </nav>
+</header>
+
+<section class="auth-section">
+  <div class="auth-card">
+    <h1>Create Account</h1>
+    <p>Join FoodieHub and enjoy delicious food!</p>
+
+    <form id="signupForm">
+      <label>Full Name</label>
+      <input type="text" id="signupName" placeholder="Enter your name" required>
+
+      <label>Email Address</label>
+      <input type="email" id="signupEmail" placeholder="Enter your email" required>
+
+      <label>Mobile Number</label>
+      <input type="tel" id="signupPhone" placeholder="10 digit mobile number"
+        pattern="[0-9]{10}" maxlength="10" required>
+
+      <label>Password</label>
+      <input type="password" id="signupPassword"
+        placeholder="Create password" minlength="8" required>
+
+      <label>Confirm Password</label>
+      <input type="password" id="confirmPassword"
+        placeholder="Confirm password" minlength="8" required>
+
+      <button type="submit">Create Account</button>
+      <p id="signupMessage" role="status"></p>
+    </form>
+
+    <p class="auth-link">
+      Already have an account?
+      <a href="login.html">Login Here</a>
+    </p>
+  </div>
+</section>
+
+<footer class="m3-footer">
+  <p>© 2026 FoodieHub. All Rights Reserved.</p>
+</footer>
+
+<script src="member3.js"></script>
+</body>
+</html>
