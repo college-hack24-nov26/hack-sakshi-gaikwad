@@ -1,0 +1,353 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fffaf3;
+  color: #292929;
+}
+
+.m2-header {
+  background: #fff;
+  padding: 18px 6%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  box-shadow: 0 2px 12px #00000010;
+}
+
+.m2-logo {
+  color: #ed6a25;
+  font-size: 27px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.m2-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.m2-header nav a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.m2-header nav a:hover {
+  color: #ed6a25;
+}
+
+.menu-hero {
+  background: #fff0df;
+  text-align: center;
+  padding: 65px 20px;
+}
+
+.menu-hero h1 {
+  font-size: 38px;
+  margin-bottom: 12px;
+}
+
+.menu-hero p {
+  margin-bottom: 25px;
+  color: #666;
+}
+
+.menu-hero input {
+  width: min(500px, 90%);
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  font-size: 15px;
+}
+
+.menu-section,
+.cart-section,
+.checkout-section {
+  padding: 50px 7%;
+}
+
+.menu-section h2,
+.cart-section h1,
+.checkout-section h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 30px;
+}
+
+.category-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 35px;
+}
+
+.category-btn {
+  border: 1px solid #ed6a25;
+  background: white;
+  color: #ed6a25;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.category-btn.active,
+.category-btn:hover {
+  background: #ed6a25;
+  color: white;
+}
+
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+}
+
+.food-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px #00000010;
+  transition: transform 0.2s;
+}
+
+.food-card:hover {
+  transform: translateY(-5px);
+}
+
+.food-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+.food-info {
+  padding: 18px;
+}
+
+.food-category {
+  color: #ed6a25;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.food-info h3 {
+  margin: 10px 0;
+}
+
+.food-info p {
+  color: #777;
+  font-size: 14px;
+  min-height: 38px;
+}
+
+.food-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 18px;
+}
+
+.food-bottom strong {
+  color: #ed6a25;
+  font-size: 20px;
+}
+
+.add-btn,
+.place-order-btn {
+  background: #ed6a25;
+  color: white;
+  border: none;
+  padding: 11px 18px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.add-btn:hover,
+.place-order-btn:hover {
+  background: #cf5114;
+}
+
+.cart-layout,
+.checkout-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.cart-items,
+.cart-summary,
+.checkout-form,
+.checkout-summary {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px #00000010;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-item h3 {
+  margin-bottom: 8px;
+}
+
+.cart-item p {
+  color: #777;
+  margin-bottom: 12px;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.quantity-controls button {
+  padding: 6px 11px;
+  border: 1px solid #ed6a25;
+  border-radius: 5px;
+  background: white;
+  color: #ed6a25;
+  cursor: pointer;
+}
+
+.quantity-controls button[data-action="remove"] {
+  border-color: #c33;
+  color: #c33;
+}
+
+.cart-summary h2,
+.checkout-summary h2 {
+  margin-bottom: 20px;
+}
+
+.cart-summary p,
+.checkout-summary p {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.cart-summary h3,
+.checkout-summary h3 {
+  margin: 20px 0;
+  color: #ed6a25;
+}
+
+.checkout-btn,
+.continue-btn {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding: 13px;
+  border-radius: 7px;
+  margin-top: 13px;
+}
+
+.checkout-btn {
+  background: #ed6a25;
+  color: white;
+}
+
+.continue-btn {
+  border: 1px solid #ed6a25;
+  color: #ed6a25;
+}
+
+.checkout-form h2 {
+  margin-bottom: 20px;
+}
+
+.checkout-form label {
+  display: block;
+  font-weight: bold;
+  margin: 15px 0 7px;
+}
+
+.checkout-form input,
+.checkout-form textarea,
+.checkout-form select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  font-size: 15px;
+}
+
+.checkout-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.place-order-btn {
+  width: 100%;
+  margin-top: 22px;
+  font-size: 16px;
+}
+
+.demo-note,
+#checkoutMessage {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #777;
+}
+
+.empty-message {
+  text-align: center;
+  padding: 25px;
+  color: #777;
+}
+
+.m2-footer {
+  text-align: center;
+  background: #292929;
+  color: white;
+  padding: 22px;
+  margin-top: 35px;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@media (max-width: 750px) {
+  .m2-header {
+    justify-content: center;
+  }
+
+  .m2-header nav {
+    justify-content: center;
+    gap: 13px;
+  }
+
+  .menu-hero h1 {
+    font-size: 28px;
+  }
+
+  .cart-layout,
+  .checkout-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .cart-section,
+  .checkout-section {
+    padding: 35px 5%;
+  }
+}
