@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoodieHub | Checkout</title>
+  <link rel="stylesheet" href="member2.css">
+</head>
+<body>
+
+<header class="m2-header">
+  <a href="index.html" class="m2-logo">FoodieHub</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="cart.html">Cart</a>
+  </nav>
+</header>
+
+<section class="checkout-section">
+  <h1>Complete Your Order</h1>
+
+  <div class="checkout-layout">
+    <form id="checkoutForm" class="checkout-form">
+      <h2>Delivery Details</h2>
+
+      <label>Full Name</label>
+      <input type="text" id="customerName" required placeholder="Enter your name">
+
+      <label>Mobile Number</label>
+      <input type="tel" id="customerPhone" required pattern="[0-9]{10}" maxlength="10" placeholder="10 digit mobile number">
+
+      <label>Email Address</label>
+      <input type="email" id="customerEmail" placeholder="Enter your email">
+
+      <label>Delivery Address</label>
+      <textarea id="customerAddress" required placeholder="Enter complete delivery address"></textarea>
+
+      <label>City</label>
+      <input type="text" id="customerCity" required placeholder="Enter city">
+
+      <label>Payment Method</label>
+      <select id="paymentMethod" required>
+        <option value="">Select Payment Method</option>
+        <option value="Cash on Delivery">Cash on Delivery</option>
+        <option value="Demo Online Payment">Demo Online Payment</option>
+      </select>
+
+      <button type="submit" class="place-order-btn">Place Order</button>
+      <p class="demo-note">Demo website only. No real payment will be processed.</p>
+      <p id="checkoutMessage" role="status"></p>
+    </form>
+
+    <div class="checkout-summary">
+      <h2>Your Order</h2>
+      <div id="checkoutItems"></div>
+      <hr>
+      <p>Subtotal: <strong id="checkoutSubtotal">₹0</strong></p>
+      <p>Delivery: <strong>₹30</strong></p>
+      <h3>Total: <span id="checkoutTotal">₹0</span></h3>
+    </div>
+  </div>
+</section>
+
+<footer class="m2-footer">
+  <p>© 2026 FoodieHub. All Rights Reserved.</p>
+</footer>
+
+<script src="member2.js"></script>
+</body>
+</html>
