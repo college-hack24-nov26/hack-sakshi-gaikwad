@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Restaurants | FoodieHub</title>
+<link rel="stylesheet" href="member1.css">
+</head>
+<body>
+
+<header class="topbar">
+<a class="brand" href="index.html"><span class="brand-mark">F</span> Foodie<span>Hub</span></a>
+<button class="menu-toggle" id="menuToggle">☰</button>
+<nav id="mainNav">
+<a href="index.html">Home</a>
+<a class="active" href="restaurants.html">Restaurants</a>
+<a href="menu.html">Menu</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a class="nav-cart" href="cart.html">Cart</a>
+<a class="nav-login" href="login.html">Login</a>
+</nav>
+</header>
+
+<section class="page-hero">
+<span class="eyebrow">FIND YOUR NEXT FAVOURITE</span>
+<h1>Restaurants you'll <em>love.</em></h1>
+<p>Explore delicious food from your favourite restaurants.</p>
+</section>
+
+<section class="section restaurant-list-section">
+
+<div class="filter-bar">
+<label class="search-box">
+⌕ <input id="restaurantSearch" type="search" placeholder="Search restaurants or food...">
+</label>
+
+<div class="filter-buttons">
+<button class="filter-btn selected" data-filter="All">All</button>
+<button class="filter-btn" data-filter="Pizza">Pizza</button>
+<button class="filter-btn" data-filter="Burger">Burgers</button>
+<button class="filter-btn" data-filter="Indian">Indian</button>
+<button class="filter-btn" data-filter="Dessert">Desserts</button>
+</div>
+</div>
+
+<div class="restaurant-grid restaurant-grid-large" id="restaurantGrid">
+
+<article class="restaurant-card" data-category="Pizza" data-name="Oven Story Pizza Italian">
+<img src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=900&q=85" alt="Pizza">
+<div class="restaurant-info">
+<div><h3>Oven Story</h3><p>Pizza · Italian</p></div>
+<span class="rating">★ 4.8</span>
+</div>
+<div class="card-bottom"><small>25–35 min · ₹₹</small><a href="menu.html">View Menu →</a></div>
+</article>
+
+<article class="restaurant-card" data-category="Burger" data-name="Burger Barn Burgers Fast Food">
+<img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=900&q=85" alt="Burger">
+<div class="restaurant-info">
+<div><h3>Burger Barn</h3><p>Burgers · Fast Food</p></div>
+<span class="rating">★ 4.7</span>
+</div>
+<div class="card-bottom"><small>20–30 min · ₹</small><a href="menu.html">View Menu →</a></div>
+</article>
+
+<article class="restaurant-card" data-category="Indian" data-name="Spice Route Indian Thali">
+<img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=900&q=85" alt="Indian food">
+<div class="restaurant-info">
+<div><h3>Spice Route</h3><p>Indian · Thali</p></div>
+<span class="rating">★ 4.9</span>
+</div>
+<div class="card-bottom"><small>30–40 min · ₹₹</small><a href="menu.html">View Menu →</a></div>
+</article>
+
+<article class="restaurant-card" data-category="Dessert" data-name="Sugar Cloud Desserts Cakes">
+<img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?auto=format&fit=crop&w=900&q=85" alt="Dessert">
+<div class="restaurant-info">
+<div><h3>Sugar Cloud</h3><p>Desserts · Bakery</p></div>
+<span class="rating">★ 4.6</span>
+</div>
+<div class="card-bottom"><small>20–30 min · ₹₹</small><a href="menu.html">View Menu →</a></div>
+</article>
+
+<article class="restaurant-card" data-category="Indian" data-name="Desi Tadka Indian Biryani">
+<img src="https://images.unsplash.com/photo-1563379091339-03246963d96c?auto=format&fit=crop&w=900&q=85" alt="Biryani">
+<div class="restaurant-info">
+<div><h3>Desi Tadka</h3><p>Indian · Biryani</p></div>
+<span class="rating">★ 4.8</span>
+</div>
+<div class="card-bottom"><small>30–40 min · ₹₹</small><a href="menu.html">View Menu →</a></div>
+</article>
+
+<article class="restaurant-card" data-category="Pizza" data-name="Cheese Please Pizza Cafe">
+<img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=900&q=85" alt="Cheese pizza">
+<div class="restaurant-info">
+<div><h3>Cheese Please</h3><p>Pizza · Cafe</p></div>
+<span class="rating">★ 4.5</span>
+</div>
+<div class="card-bottom"><small>25–35 min · ₹₹</small><a href="menu.html">View Menu →</a></div>
+</article>
+
+</div>
+
+<p id="noRestaurants" class="empty-state" hidden>
+No restaurants found. Try another search.
+</p>
+
+</section>
+
+<footer class="footer">
+<a class="brand" href="index.html"><span class="brand-mark">F</span> Foodie<span>Hub</span></a>
+<p>Made with love for people who love food.</p>
+<div>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="restaurants.html">Restaurants</a>
+</div>
+<small>© 2026 FoodieHub. All rights reserved.</small>
+</footer>
+
+<script src="member1.js"></script>
+</body>
+</html>
