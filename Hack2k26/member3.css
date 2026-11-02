@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fffaf3;
+  color: #292929;
+}
+
+.m3-header {
+  background: white;
+  padding: 18px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  box-shadow: 0 2px 12px #00000010;
+}
+
+.m3-logo {
+  font-size: 27px;
+  font-weight: bold;
+  color: #ed6a25;
+  text-decoration: none;
+}
+
+.m3-header nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.m3-header nav a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.m3-header nav a:hover {
+  color: #ed6a25;
+}
+
+.auth-section,
+.track-section {
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 45px 20px;
+}
+
+.auth-card,
+.track-card {
+  width: 100%;
+  max-width: 480px;
+  background: white;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 5px 25px #00000012;
+}
+
+.auth-card h1,
+.track-card h1 {
+  text-align: center;
+  color: #ed6a25;
+  margin-bottom: 10px;
+}
+
+.auth-card > p,
+.track-card > p {
+  text-align: center;
+  color: #777;
+  margin-bottom: 25px;
+}
+
+.auth-card label {
+  display: block;
+  font-weight: bold;
+  margin: 15px 0 7px;
+}
+
+.auth-card input,
+.track-card input {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  font-size: 15px;
+}
+
+.auth-card button,
+.track-card button {
+  width: 100%;
+  background: #ed6a25;
+  color: white;
+  padding: 13px;
+  border: none;
+  border-radius: 7px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.auth-card button:hover,
+.track-card button:hover {
+  background: #cf5114;
+}
+
+.auth-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.auth-link a {
+  color: #ed6a25;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#loginMessage,
+#signupMessage,
+#trackMessage {
+  margin-top: 15px;
+  color: #ed6a25;
+  text-align: center;
+  font-size: 14px;
+}
+
+.tracking-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 30px 0 20px;
+}
+
+.tracking-step {
+  text-align: center;
+  color: #999;
+}
+
+.tracking-step span {
+  display: inline-flex;
+  width: 35px;
+  height: 35px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: #ddd;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.tracking-step.completed {
+  color: #218838;
+}
+
+.tracking-step.completed span {
+  background: #218838;
+  color: white;
+}
+
+.tracking-step p {
+  font-size: 12px;
+}
+
+#currentStatus {
+  text-align: center;
+  font-weight: bold;
+  color: #ed6a25;
+}
+
+.m3-footer {
+  background: #292929;
+  color: white;
+  padding: 22px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+@media (max-width: 650px) {
+  .m3-header {
+    justify-content: center;
+  }
+
+  .m3-header nav {
+    justify-content: center;
+    gap: 13px;
+  }
+
+  .auth-card,
+  .track-card {
+    padding: 25px 18px;
+  }
+
+  .tracking-steps {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 25px;
+  }
+}
