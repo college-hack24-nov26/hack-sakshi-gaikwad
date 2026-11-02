@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoodieHub | Menu</title>
+  <link rel="stylesheet" href="member2.css">
+</head>
+<body>
+
+<header class="m2-header">
+  <a href="index.html" class="m2-logo">FoodieHub</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="restaurants.html">Restaurants</a>
+    <a href="menu.html">Menu</a>
+    <a href="cart.html">Cart 🛒</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="menu-hero">
+  <h1>Explore Our Delicious Menu</h1>
+  <p>Fresh food, amazing taste, delivered to you.</p>
+  <input type="text" id="foodSearch" placeholder="Search your favourite food...">
+</section>
+
+<section class="menu-section">
+  <h2>Our Food Menu</h2>
+
+  <div class="category-buttons">
+    <button class="category-btn active" data-category="All">All</button>
+    <button class="category-btn" data-category="Pizza">Pizza</button>
+    <button class="category-btn" data-category="Burger">Burger</button>
+    <button class="category-btn" data-category="Indian">Indian</button>
+    <button class="category-btn" data-category="Chinese">Chinese</button>
+    <button class="category-btn" data-category="Drinks">Drinks</button>
+  </div>
+
+  <div class="food-grid" id="foodGrid">
+
+    <div class="food-card" data-category="Pizza" data-name="Margherita Pizza">
+      <img src="https://images.unsplash.com/photo-1579751626657-72bc17010498?w=600" alt="Margherita Pizza">
+      <div class="food-info">
+        <span class="food-category">Pizza</span>
+        <h3>Margherita Pizza</h3>
+        <p>Classic cheese pizza with fresh toppings.</p>
+        <div class="food-bottom">
+          <strong>₹199</strong>
+          <button class="add-btn" data-id="1">Add +</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="food-card" data-category="Burger" data-name="Cheese Burger">
+      <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600" alt="Cheese Burger">
+      <div class="food-info">
+        <span class="food-category">Burger</span>
+        <h3>Cheese Burger</h3>
+        <p>Delicious burger with cheese and vegetables.</p>
+        <div class="food-bottom">
+          <strong>₹149</strong>
+          <button class="add-btn" data-id="2">Add +</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="food-card" data-category="Indian" data-name="Paneer Biryani">
+      <img src="https://images.unsplash.com/photo-1563379091339-03246963d96c?w=600" alt="Paneer Biryani">
+      <div class="food-info">
+        <span class="food-category">Indian</span>
+        <h3>Paneer Biryani</h3>
+        <p>Spicy aromatic rice with delicious paneer.</p>
+        <div class="food-bottom">
+          <strong>₹220</strong>
+          <button class="add-btn" data-id="3">Add +</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="food-card" data-category="Chinese" data-name="Veg Noodles">
+      <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?w=600" alt="Veg Noodles">
+      <div class="food-info">
+        <span class="food-category">Chinese</span>
+        <h3>Veg Noodles</h3>
+        <p>Hot and tasty noodles with fresh vegetables.</p>
+        <div class="food-bottom">
+          <strong>₹130</strong>
+          <button class="add-btn" data-id="4">Add +</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="food-card" data-category="Pizza" data-name="Farmhouse Pizza">
+      <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600" alt="Farmhouse Pizza">
+      <div class="food-info">
+        <span class="food-category">Pizza</span>
+        <h3>Farmhouse Pizza</h3>
+        <p>Loaded with fresh vegetables and cheese.</p>
+        <div class="food-bottom">
+          <strong>₹249</strong>
+          <button class="add-btn" data-id="5">Add +</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="food-card" data-category="Drinks" data-name="Cold Coffee">
+      <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600" alt="Cold Coffee">
+      <div class="food-info">
+        <span class="food-category">Drinks</span>
+        <h3>Cold Coffee</h3>
+        <p>Refreshing chilled coffee.</p>
+        <div class="food-bottom">
+          <strong>₹99</strong>
+          <button class="add-btn" data-id="6">Add +</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <p id="noFood" class="empty-message" hidden>No food found.</p>
+</section>
+
+<footer class="m2-footer">
+  <p>© 2026 FoodieHub. All Rights Reserved.</p>
+</footer>
+
+<script src="member2.js"></script>
+</body>
+</html>
